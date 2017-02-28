@@ -1,0 +1,21 @@
+ <div ng-controller="searchMainController">
+ <div>
+ 	<header><h1>Search texte</h1></header>
+     <section class='searchField'>
+       <form ng-submit='search()'>
+         <input ng-model='searchTerm' type='text'>
+         <input type='submit' value='Chercher'>
+       </form>
+     </section>
+ </div>
+ <div >
+     <table>
+       <tr ng-repeat="item in hits">
+       <td><b><a href="" ng-click="detail(item['_id'])">{{item['_source']['name']}}</a></b>
+       {{item['_source']['description']}}
+       </td>
+       </tr>
+     </table>
+ </div>
+
+ </div>

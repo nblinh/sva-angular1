@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<!-- Angular JS Resource -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/angular-resource.min.js"></script>
+   	<script src="js/elasticsearch.angular.js"></script>
+   	
+   	<script src="app/app.js"></script>
+   	<script src="app/rootController.js"></script>
+   	
+   	<script src="app/searchMain/searchMainController.js"></script>
+   	<script src="app/searchDetail/searchDetailController.js"></script>
+   	
+   	<script src="app/services/connector.js"></script>
+</head>
+<body style="margin: 0" ng-app="mainApp">
+  	<div ng-init="init()" ng-controller="rootController">
+  		<div>
+        <div class="topbar" style="width: 100%; z-index: 110; position: relative; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16), 0 1px 2px 0 rgba(0,0,0,0.12); background-color: whitesmoke; height: 60px">
+          <div style="display: table-cell">
+            <img style="display: inline-block;margin:5px 10px; height: 50px" src="http://www.irt-systemx.fr/v2/wp-content/themes/systemx-2/assets/img/systemx-logo.svg" class="systemxlogo">
+          </div>
+          <div style="display: table-cell; vertical-align: middle">
+            <strong>Démonstrateur SVA v. 0.0.1</strong>
+          </div>
+        </div>
+			  <div ng-view></div>  		
+  		</div>
+  	</div>
+</body>
+</html>

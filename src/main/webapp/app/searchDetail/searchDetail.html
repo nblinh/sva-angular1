@@ -1,0 +1,18 @@
+ <div ng-init="init()" ng-controller="searchDetailController">
+ <div >
+ 	<h3><span>{{item['_source']['name']}}</span></h3>
+    <span>description: {{item['_source']['description']}}</span><br>
+    <span>landes: {{item['_source']['landes']}}</span><br>
+    <span>oneway: {{item['_source']['oneway']}}</span><br>
+    <span>maxspeed: {{item['_source']['maxspeed']}}</span><br>
+    <span>junction: {{item['_source']['junction']}}</span><br>
+    <span>filename: {{item['_source']['filename']}}
+    	<a ng-href="http://sva.default-staging.k8s.local/maps/SVA/terrains/Terrains_de_reference/{{item['_source']['filename']}}.zip" 
+    		target="_self" download="{{item['_source']['filename']}}.zip">Telecharger</a></span><br>
+    <img src="http://sva.default-staging.k8s.local/maps/SVA/terrains/Terrains_de_reference/{{item['_source']['filename']}}.png"/>
+ </div>
+ <div style="padding-top:10px;">
+ 	<input type="button" value="Retour au result de recherche" ng-click="back()"/>
+ </div>
+
+ </div>
